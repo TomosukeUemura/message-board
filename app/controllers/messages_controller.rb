@@ -7,10 +7,14 @@ class MessagesController < ApplicationController
   
   def create
     @message = Message.new(message_params)
-    @message.save
+    if@message.save
     redirect_to root_path , notice: 'メッセージを保存しました'
+  else
+  @message = Message.all
+  flash.now[:slert] = "メッセージを保存しました"
+  render 'index'
   end
-
+  
   private
   def message_params
     params.require(:message).permit(:name, :body)
