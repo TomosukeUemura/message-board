@@ -17,6 +17,52 @@
   </nav>
   <div class="container">
     <%= yield %>
-</div>
-</body>
+    <form>
+	<div class="form-group">
+		<label for="InputEmail">メール・アドレス</label>
+		<input type="email" class="form-control" id="InputEmail" placeholder="メール・アドレスを入力して下さい。">
+	</div>
+	<div class="form-group">
+		<label for="InputPassword">パスワード</label>
+		<input type="password" class="form-control" id="InputPassword" placeholder="パスワードを入力して下さい。">
+	</div>
+	<div class="form-group">
+		<label for="InputTextarea">要件</label>
+		<textarea class="form-control" id="InputTextarea" placeholder="要件を入力して下さい。"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="InputSelect">選択</label>
+		<select class="form-control" id="InputSelect">
+			<option>選択肢１</option>
+			<option>選択肢２</option>
+			<option>選択肢３</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="InputFile">ファイル</label>
+		<input type="file" id="InputFile">
+		<p class="help-block">ヘルプ用ブロック。これはサンプルです。</p>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="checkboxA"> チェックボックスＡ
+		</label>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="checkboxB"> チェックボックスＢ
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> ラジオボタン１
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> ラジオボタン２
+		</label>
+	</div>
+	<button type="submit" class="btn btn-default">送信</button>
+</form>
 </html>
